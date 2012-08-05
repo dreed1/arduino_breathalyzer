@@ -1,3 +1,11 @@
+/**********************
+Arduino Breathalyzer
+Written by Dan Reed (dan@danreed.net)
+8/3/12
+
+BEER WARE LICENSE
+Use it all you want, if you feel like it buy me a beer.
+**********************/
 
 int red = 11;
 int green = 10;
@@ -15,7 +23,7 @@ void setup(){
 }
 
 void loop(){
-  int reading = (analogRead(beerPin)-soberReading);
+  int reading = (analogRead(beerPin)-soberReading)/1.5;
   if(reading<0){
     soberReading--;  
   }
